@@ -1,7 +1,6 @@
 body{
     background-image:url(../img/background.jpeg);
     /* arreglar el fondo porque se repite */
-    
 }
 .logo {
     border-radius: 100px;
