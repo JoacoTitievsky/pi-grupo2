@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./detallecancion.html">
+    <link rel="stylesheet" href="./detallecantante.html">
+    <link rel="stylesheet" href="./detalledelgenero.html">
+    <link rel="stylesheet" href="./genres.html">
+    <link rel="stylesheet" href="./index.html">
+    <link rel="stylesheet" href="./playlist.html">
+    <link rel="stylesheet" href="./resultadobusqueda.html">
     <title>Detalle Álbum</title>
 </head>
 <body>
@@ -24,13 +31,17 @@
         <section>
             <nav>
                 <ul class="navig">
-                    <li><a href="#">HOME</a> </li>
-                    <li><a href="#">DETALLE</a> </li>
-                    <!-- FALTA AGREGAR UN FORM QUE ME DESPLIEGUE LAS 3 PAGINAS DE DETALLE A LAS QUE PODRIA NAVEGAR EL USUARIO -->
-                    <li><a href="#">FAVORITOS</a> </li>
-                    <li><a href="#">GENEROS</a> </li>
-                    <li><a href="#">DETALLE DEL GÉNERO</a> </li>
-                    <li><a href="#">RESULTADOS DE BÚSQUEDA</a> </li>
+                    <li><a href="./index.html">HOME</a> </li>
+                    <li class="desplegable"><a href="">DETALLE</a>
+                        <div class="desplegable-cont">
+                            <a href="./detallecancion.html">Detalle de una canción</a>
+                            <a href="./detallealbum.html">Detalle del álbum</a>
+                            <a href="./detallecantante.html">Detalle del cantante</a>
+                        </div>
+                    </li>
+                    <li><a href="./playlist.html">PLAYLIST</a> </li>
+                    <li><a href="./genres.html">GENEROS</a> </li>
+                    <li><a href="./detalledelgenero.html">DETALLE DEL GÉNERO</a> </li>
                 </ul>
             </nav>
             </section>
