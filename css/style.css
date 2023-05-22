@@ -1,20 +1,18 @@
 body {
     background-color: grey;
-    /* arreglar el fondo porque se repite */
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     font-style: normal;
-    font-weight: normal;
+    font-weight: normal; */
     color: black;
 
 }
 
 .logo {
     border-radius: 100px;
-    display: block;
+    display: flex;
+    justify-content: center;
     margin: auto;
-
-    /* cambiar el logo y acomodarlo con la barra de nav */
 }
 
 .logo img {
@@ -57,8 +55,8 @@ body {
 .art-form {
     width: 50%;
     height: 37px;
-    align-items: center;
     display: flex;
+    justify-content: center;
 }
 
 .buttonart {
@@ -90,3 +88,4 @@ body {
 .desplegable:hover .desplegable-cont {
     display: block;
 }
+
