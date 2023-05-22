@@ -1,6 +1,13 @@
 body{
     background-image:url(../img/background.jpeg);
     /* arreglar el fondo porque se repite */
+    display: flex;
+    flex-wrap: wrap;
+    font-style: normal;
+    font-weight: normal;
+    color: black;
+
+    
 }
 .logo {
     border-radius: 100px;
