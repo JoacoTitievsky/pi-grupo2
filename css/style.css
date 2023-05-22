@@ -1,11 +1,12 @@
 body{
-    background-image:url(../img/background.jpeg);
+    background-color: grey;
     /* arreglar el fondo porque se repite */
 }
 .logo {
     border-radius: 100px;
     display: block;
     margin: auto;
+    
     /* cambiar el logo y acomodarlo con la barra de nav */
 }
 .logo img{
@@ -41,4 +42,16 @@ body{
     padding: 15px 30px;
     color: white;
     text-decoration: none;
+}
+
+.art-form{
+    width: 50%;
+    height: 37px;
+    align-items: center;
+    display:flex;
+}
+
+.button-art{
+    background-color: white;
+    height: 37px;
 }
