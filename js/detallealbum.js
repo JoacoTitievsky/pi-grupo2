@@ -4,7 +4,6 @@ function formulario() {
         alert ("Debe ingresar al menos 3 caracteres")
         return false;
     }
-
     return true;
 }
 

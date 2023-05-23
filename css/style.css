@@ -56,7 +56,14 @@ body {
     width: 50%;
     height: 37px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    margin: 0px 30px 10px 0px;
+}
+
+.contenedor-form{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
 }
 
 .buttonart {
