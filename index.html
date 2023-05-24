@@ -5,9 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./detallealbum.html">
+    <link rel="stylesheet" href="./detallecancion.html">
+    <link rel="stylesheet" href="./detallecantante.html">
+    <link rel="stylesheet" href="./detalledelgenero.html">
+    <link rel="stylesheet" href="./genres.html">
+    <link rel="stylesheet" href="./playlist.html">
+    <link rel="stylesheet" href="./resultadobusqueda.html">
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <section class="logo">
+            <img class="imglogo" src="./img/logo1.jpeg" alt="">
+        </section>
+        <section>
+            <div class="contenedor-form">
+                <article class="art-form">
+                    <form id="buscador" class="form-result"action="./resultadobusqueda.html" method="get">
+                        <input  type="text" name="buscar" id="textoBuscado" required>
+                        <button class="buttonart"type="submit">Buscar</button>
+                    </form>
+                </article>
+            </div>
+            </article>
+            <nav>
+                <ul class="navig">
+                    <li><a href="./index.html">HOME</a> </li>
+                    <!-- <li class="desplegable"><a href="">DETALLE</a>
+                        <div class="desplegable-cont">
+                            <a href="./detallecancion.html">Detalle de una canción</a>
+                            <a href="./detallealbum.html">Detalle del álbum</a>
+                            <a href="./detallecantante.html">Detalle del cantante</a>
+                        </div>
+                    </li> -->
+                    <li><a href="./playlist.html">PLAYLIST</a> </li>
+                    <li><a href="./genres.html">GENEROS</a> </li>
+                    <!-- <li><a href="./detalledelgenero.html">DETALLE DEL GÉNERO</a> </li> -->
+                </ul>
+            </nav>
+            </section>
+        <footer class="foot">
+            <p>Joaquin Titievsky, Pilar Canil, Antonella Plati</p>
+        </footer>
+        <script src="./js/index.js"></script>
+    </header>
 </body>
 </html>
