@@ -1,0 +1,1 @@
+let endpoint_tracks = "https://api.allorigins.win/raw?url=https://developers.deezer.com/api/track"
