@@ -54,7 +54,7 @@ body {
     margin: 0px 30px 10px 0px;
 }
 
-.contenedor-form{
+.contenedor-form {
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
@@ -65,13 +65,13 @@ body {
     height: 37px;
 }
 
-.titulopadre{
+.titulopadre {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.divpadrecanc{
+.divpadrecanc {
     display: flex;
     background-color: black;
     color: white;
@@ -84,13 +84,13 @@ body {
 }
 
 
-.contdiscos{
+.contdiscos {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
 }
 
-.divpadredisc{
+.divpadredisc {
     display: flex;
     background-color: black;
     color: white;
@@ -102,13 +102,13 @@ body {
     justify-content: center;
 }
 
-.contalbum{
+.contalbum {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
 }
 
-.divpadreart{
+.divpadreart {
     display: flex;
     background-color: black;
     color: white;
@@ -120,7 +120,7 @@ body {
     justify-content: center;
 }
 
-.contart{
+.contart {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
@@ -151,3 +151,38 @@ body {
     display: block;
 }
 
+.maindetallealbum {
+    display: flex;
+    flex-direction: column;
+}
+
+.sectiondetallealbum {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.divjs {
+    display: flex;
+    background-color: rgba(126, 126, 126, 0.5);
+    width: 80vw;
+    border: 3px rgba(239, 142, 6, 0.934) solid;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.detallealbumpadre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.divcancionesalbum{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

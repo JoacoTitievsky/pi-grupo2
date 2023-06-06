@@ -12,3 +12,5 @@ if(campoBuscar.value.length == 0) {
     this.submit();
 }
 });
+
+let topalbums = ""
