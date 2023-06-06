@@ -65,6 +65,67 @@ body {
     height: 37px;
 }
 
+.titulopadre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divpadrecanc{
+    display: flex;
+    background-color: black;
+    color: white;
+    border: 3px rgba(239, 142, 6, 0.934) solid;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contdiscos{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.divpadredisc{
+    display: flex;
+    background-color: black;
+    color: white;
+    border: 3px rgba(239, 142, 6, 0.934) solid;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contalbum{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.divpadreart{
+    display: flex;
+    background-color: black;
+    color: white;
+    border: 3px rgba(239, 142, 6, 0.934) solid;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contart{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
 
 .desplegable {
     position: relative;
