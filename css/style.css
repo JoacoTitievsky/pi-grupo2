@@ -164,7 +164,7 @@ body {
     margin-bottom: 20px;
 }
 
-.divjs {
+.divalbum {
     display: flex;
     background-color: rgba(126, 126, 126, 0.5);
     width: 80vw;
@@ -185,4 +185,49 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+.artdetallecancionpadre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.divartcancion{
+    display: flex;
+    background-color: rgba(126, 126, 126, 0.5);
+    width: 80vw;
+    border: 3px rgba(239, 142, 6, 0.934) solid;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contfav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+}
+
+.contfav2{
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 380px;
+    background-color: rgba(126, 126, 126, 0.5);
+    align-items: center;
+    border: 3px rgba(239, 142, 6, 0.934) solid;
+}
+
+.favorito{
+    text-decoration: none;
+    margin-top: 20px;
+    width: 20px;
+    margin-right: 10px;
 }
