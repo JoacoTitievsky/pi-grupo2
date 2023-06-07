@@ -1,3 +1,8 @@
+let endpoint_album = "https://api.allorigins.win/raw?url=https://developers.deezer.com/api/album" 
+let endpoint_artista = "https://api.allorigins.win/raw?url=https://developers.deezer.com/api/artist"
+let endpoint_tracks = "https://api.allorigins.win/raw?url=https://developers.deezer.com/api/track"
+
+
 let buscador = document.querySelector('#buscador');
 let campoBuscar = document.querySelector('#textoBuscado');
 
@@ -14,3 +19,6 @@ if(campoBuscar.value.length == 0) {
 });
 
 let topalbums = ""
+
+fetch
+
