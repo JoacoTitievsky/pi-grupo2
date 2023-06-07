@@ -20,5 +20,26 @@ if(campoBuscar.value.length == 0) {
 
 let topalbums = ""
 
-fetch
+fetch(url)
+    .then(function (response) {
+        return response.json()
+    })
+    .then(function (data) {
+        console.log(data.results);
+
+        let characters = ""
+        for (let index = 0; index < data.results.length; index++) {
+            characters += `<article>
+                                    <img src= ${data.results[index].image}  alt='' />
+                                    <p>Name: ${data.results[index].name} </p>
+                                    <p>Status: ${data.results[index].status}  </p>
+                                    <a href="./detallepersonajes.html?id=${data.results[index].id}"> Ver mas </a>
+                            </article>`
+        }
+        personajes.innerHTML= characters
+    })
+    .catch(function (error) {
+        console.log("Error: " + error);
+    })
+
 
