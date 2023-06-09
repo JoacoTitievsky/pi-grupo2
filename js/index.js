@@ -27,41 +27,31 @@ fetch(url)
         return response.json()
     })
     .then(function (data) {
-        console.log(data.results);
+        console.log(data);
 
-        rellenarCanciones(data.tracks)
-        rellenarCanciones(data.albums)
-        rellenarCanciones(data.artists)
-        rellenarCanciones(data.playlists)
-
-
-
-        let album = ""
-        for (let index = 0; index < data.results.length; index++) {
-            album += `<a href = "./detallealbum.html?id=${data.results[index].id}">
-            <img class= "imgcancion" src=${data.results[index]} alt=""/>
-            <h3 class="nombreartista">${data.results[index].title}</h3>
-            <h4 class="nombrealbum">${data.results[index].artist.name}</h4>
-            </a>`
-        }
+        // rellenarCanciones(data.tracks)
+        // rellenarCanciones(data.albums)
+        // rellenarCanciones(data.artists)
+        // rellenarCanciones(data.playlists)
+   
         
     })
     .catch(function (error) {
         console.log("Error: " + error);
     })
 
+let album = document.querySelector('.album')
 
 function rellenarCanciones(data) {
-    
+    console.log(data.data);
+    for (let index = 0; index < data.data.length; index++) {
+        album.innerHTML += `<a href = "./detallealbum.html?id=${data.data[index].id}">
+        <img class= "imgcancion" src=${data.data[index].title} alt=""/>
+        <h3 class="nombreartista">${data.data[index].artists}</h3>
+        <h4 class="nombrealbum">${data.data[index].albums}</h4>
+        </a>`
+    }
 }
-function rellenarCanciones(data) {
-    
-}
-function rellenarCanciones(data) {
-    
-}
-function rellenarCanciones(data) {
-    
-}
+
 
 
