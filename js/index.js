@@ -1,7 +1,3 @@
-let endpoint_album = "https://api.allorigins.win/raw?url=https://developers.deezer.com/api/album" 
-let endpoint_artista = "https://api.allorigins.win/raw?url=https://developers.deezer.com/api/artist"
-let endpoint_tracks = "https://api.allorigins.win/raw?url=https://developers.deezer.com/api/track"
-
 let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart"
 
 let buscador = document.querySelector('#buscador');
@@ -33,14 +29,26 @@ fetch(url)
         // rellenarCanciones(data.albums)
         // rellenarCanciones(data.artists)
         // rellenarCanciones(data.playlists)
-   
+        
+        let album = document.querySelector('.album')
+
+        function rellenarCanciones(data) {
+            console.log(data.data);
+            for (let index = 0; index < data.data.length; index++) {
+                album.innerHTML += `<a href = "./detallealbum.html?id=${data.data[index].id}">
+                <img class= "imgcancion" src=${data.data[index].title} alt=""/>
+                <h3 class="nombreartista">${data.data[index].artists}</h3>
+                <h4 class="nombrealbum">${data.data[index].albums}</h4>
+                </a>`
+            }
+        }
         
     })
     .catch(function (error) {
         console.log("Error: " + error);
     })
 
-let album = document.querySelector('.album')
+/* let album = document.querySelector('.album')
 
 function rellenarCanciones(data) {
     console.log(data.data);
@@ -51,7 +59,7 @@ function rellenarCanciones(data) {
         <h4 class="nombrealbum">${data.data[index].albums}</h4>
         </a>`
     }
-}
+} */
 
 
 
