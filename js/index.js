@@ -18,6 +18,7 @@ if(campoBuscar.value.length == 0) {
 let topalbums = ""
 let imgcancion= document.querySelector('.imgcancion')
 
+// FALTA CAMBIAR LAS A
 // Canciones
 fetch(url)
     .then(function (response) {
@@ -80,7 +81,7 @@ fetch(url)
         let objeto = data.tracks.data
         console.log(objeto);
         for (let index = 0; index < 5; index++) {
-            artista.innerHTML += `<a href = "./detalleartista.html?id=${objeto[index].id}">
+            artista.innerHTML += `<a href = "./detallecantante.html?id=${objeto[index].id}">
             <img class= "imgartista" src=${objeto[index].artist.picture} alt="${objeto[index].title}"/>
             <h4 class="nombreartista">${objeto[index].artist.name}</h4> 
             </a>`
