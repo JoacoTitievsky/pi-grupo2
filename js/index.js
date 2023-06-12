@@ -31,16 +31,16 @@ fetch(url)
         // rellenarCanciones(data.playlists)
         
         let album = document.querySelector('.album')
-        let objeto = data.data
+        let objeto = data.tracks.data
         console.log(objeto);
         for (let index = 0; index < objeto.length; index++) {
             album.innerHTML += `<a href = "./detallealbum.html?id=${objeto[index].id}">
-            <img class= "imgcancion" src=${objeto[index].title} alt=""/>
-            <h3 class="nombreartista">${objeto[index].artist}</h3>
-            <h4 class="nombrealbum">${objeto[index].album}</h4>
+            <img class= "imgcancion" src=${objeto[index].album.cover} alt="${objeto[index].title}"/>
+            <h3 class="nombreartista">${objeto[index].artist.name}</h3>
+            <h4 class="nombrealbum">${objeto[index].album.title}</h4>
             </a>`
         }
-    }
+    })
         
     .catch(function (error) {
         console.log("Error: " + error);
@@ -58,6 +58,3 @@ function rellenarCanciones(data) {
         </a>`
     }
 } */
-
-
-
