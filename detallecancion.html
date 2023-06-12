@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Detalle Cancion</title>
 </head>
+
 <body>
     <header>
         <section class="logo">
@@ -15,9 +16,9 @@
         <section>
             <div class="contenedor-form">
                 <article class="art-form">
-                    <form id="buscador" class="form-result"action="./resultadobusqueda.html" method="get">
-                        <input  type="text" name="buscar" id="textoBuscado" required>
-                        <button class="buttonart"type="submit">Buscar</button>
+                    <form id="buscador" class="form-result" action="./resultadobusqueda.html" method="get">
+                        <input type="text" name="buscar" id="textoBuscado" required>
+                        <button class="buttonart" type="submit">Buscar</button>
                     </form>
                 </article>
             </div>
@@ -31,23 +32,23 @@
                     <li><a href="./genres.html">GENEROS</a> </li>
                 </ul>
             </nav>
-            </section>
-        </header>
-        <main>
-            <section>
-                <article class="artdetallecancionpadre">
-                    <div class="divartcancion">
-                        <div class="contfav"></div>
-                    </div>
-                    <div contfav2>
-                        <button class="favorito"> Agregar a mi lista de favoritos</button>
-                    </div>
-                </article>
-            </section>
-        </main>
-        <footer class="foot">
-            <p>Joaquin Titievsky, Pilar Canil, Antonella Plati</p>
-        </footer>
-    <script src="./detallecancion.html"></script>
+        </section>
+    </header>
+    <main>
+        <h1 class="h1">Detalle de la Canción</h1>
+        <section class="tracklist"></section>
+
+        <article>
+            <img class="imagen" src="" alt="">
+            <p class="cancion"> Canción: </p>
+            <p class="album">Album: </p>
+            <p class="artista">Artista: </p>
+        </article>
+    </main>
+    <footer class="foot">
+        <p>Joaquin Titievsky, Pilar Canil, Antonella Plati</p>
+    </footer>
+    <script src="./js/detalletracks.js"></script>
 </body>
+
 </html>

@@ -4,6 +4,11 @@ body {
 
 }
 
+a{
+    color: white;
+    text-decoration: none;
+
+}
 .logo {
     display: flex;
     justify-content: center;
@@ -73,17 +78,51 @@ body {
 
 .divpadrecanc {
     display: flex;
+    background-color: rgba(0, 0, 0, 0.366);
+    color: white;
+    border: 3px rgba(64, 62, 59, 0.934) solid;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.cancionestit{
+    display: flex;
     background-color: black;
     color: white;
     border: 3px rgba(239, 142, 6, 0.934) solid;
     padding: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
-    align-items: center;
     justify-content: center;
 }
 
-
+.generostit{
+    display: flex;
+    background-color: black;
+    color: white;
+    border: 3px rgba(239, 142, 6, 0.934) solid;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+    
+.divpadregenres{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.366);
+    color: white;
+    border: 3px rgba(64, 62, 59, 0.934) solid;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+}
 .contdiscos {
     display: flex;
     justify-content: space-between;
@@ -92,63 +131,30 @@ body {
 
 .divpadredisc {
     display: flex;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.366);
     color: white;
-    border: 3px rgba(239, 142, 6, 0.934) solid;
+    border: 3px rgba(64, 62, 59, 0.934) solid;
     padding: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: row;
 }
 
-.contalbum {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-}
+
 
 .divpadreart {
     display: flex;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.366);
     color: white;
-    border: 3px rgba(239, 142, 6, 0.934) solid;
+    border: 3px rgba(64, 62, 59, 0.934) solid;
     padding: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
-    align-items: center;
-    justify-content: center;
-}
-
-.contart {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-}
-
-
-.desplegable {
-    position: relative;
-    display: inline-block;
-}
-
-.desplegable-cont {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-}
-
-.desplegable-cont a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.desplegable:hover .desplegable-cont {
-    display: block;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: row;
 }
 
 .maindetallealbum {
@@ -164,15 +170,7 @@ body {
     margin-bottom: 20px;
 }
 
-.divalbum {
-    display: flex;
-    background-color: rgba(126, 126, 126, 0.5);
-    width: 80vw;
-    border: 3px rgba(239, 142, 6, 0.934) solid;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
+
 
 .detallealbumpadre {
     display: flex;
@@ -230,4 +228,26 @@ body {
     margin-top: 20px;
     width: 20px;
     margin-right: 10px;
+}
+
+.artistastit{
+    display: flex;
+    background-color: black;
+    color: white;
+    border: 3px rgba(239, 142, 6, 0.934) solid;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.albumestit{
+    display: flex;
+    background-color: black;
+    color: white;
+    border: 3px rgba(239, 142, 6, 0.934) solid;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
 }
