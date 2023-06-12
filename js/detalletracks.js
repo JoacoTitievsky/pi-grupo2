@@ -1,7 +1,8 @@
 let qs = location.search;
 let qsObj = new URLSearchParams(qs)
 let id = qsObj.get('id');
-let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/track` + id;
+
+let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/track/3135556${id}` ;
 
 
 fetch(url)
@@ -9,9 +10,9 @@ fetch(url)
         return response.json()
     })
     .then(function (data) {
-        console.log(data);
-        let cancion = document.querySelector(".cancion")
-        cancion.innerText = data.tracks.data;
+    console.log(data);
+        // let detailcancion = document.querySelector(".detailcancion")
+        // detailcancion.innerText = data.tracks.data;
 
     })
     .catch(function (error) {
