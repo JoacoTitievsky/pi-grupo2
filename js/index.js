@@ -31,10 +31,10 @@ fetch(url)
         let objeto = data.tracks.data
         console.log(objeto);
         for (let index = 0; index < 5; index++) {
-            canciones.innerHTML += `<a href = "./detallealbum.html?id=${objeto[index].id}">
+            canciones.innerHTML += `<a href = "./detallecancion.html?id=${objeto[index].id}">
             <h2 class="nombrecancion">${objeto[index].album.title}</h2>
             <img class= "imgcancion" src=${objeto[index].album.cover} alt="${objeto[index].title}"/>
-            <h3 class="nombrealbum">${objeto[index].album.title}</h4>
+            <h3 class="nombrealbum">${objeto[index].album.title}</h3>
             <h4 class="nombreartista">${objeto[index].artist.name}</h4>
             </a>`
         }
@@ -80,10 +80,11 @@ fetch(url)
         let objeto = data.tracks.data
         console.log(objeto);
         for (let index = 0; index < 5; index++) {
-            artista.innerHTML += `<a href = "./detallealbum.html?id=${objeto[index].id}">
+            artista.innerHTML += `<a href = "./detalleartista.html?id=${objeto[index].id}">
             <img class= "imgartista" src=${objeto[index].artist.picture} alt="${objeto[index].title}"/>
-            <h3 class="nombrealbum">${objeto[index].album.title}</h3>
+            <h4 class="nombreartista">${objeto[index].artist.name}</h4> 
             </a>`
+       
         }
     })
         
