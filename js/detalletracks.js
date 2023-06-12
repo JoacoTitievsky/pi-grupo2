@@ -1,7 +1,7 @@
 let qs = location.search;
 let qsObj = new URLSearchParams(qs)
 let id = qsObj.get('id');
-let url = `https://api.allorigins.win/raw?url=https://developers.deezer.com/api/track` + id;
+let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/track` + id;
 
 
 fetch(url)
@@ -9,18 +9,18 @@ fetch(url)
         return response.json()
     })
     .then(function (data) {
+        console.log(data);
+        // let cancion = document.querySelector(".cancion")
+        // cancion.innerText = data.title;
 
-        let cancion = document.querySelector(".cancion")
-        cancion.innerText = data.title;
+        // let album = document.querySelector(".album")
+        // album.innerText = data.album.title;
 
-        let album = document.querySelector(".album")
-        album.innerText = data.album.title;
+        // let artista = document.querySelector(".artista")
+        // artista.innerText = data.artist.name;
 
-        let artista = document.querySelector(".artista")
-        artista.innerText = data.artist.name;
-
-        let imagen = document.querySelector(".imagen")
-        imagen.src = data.album.cover;
+        // let imagen = document.querySelector(".imagen")
+        // imagen.src = data.album.cover;
 
     })
     .catch(function (error) {

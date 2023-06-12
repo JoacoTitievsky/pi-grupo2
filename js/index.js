@@ -15,7 +15,7 @@ if(campoBuscar.value.length == 0) {
 }
 });
 
-let topalbums = ""
+
 let imgcancion= document.querySelector('.imgcancion')
 
 // FALTA CAMBIAR LAS A
@@ -27,7 +27,6 @@ fetch(url)
     .then(function (data) {
         console.log(data);
 
-        
         let canciones = document.querySelector('.divpadrecanc')
         let objeto = data.tracks.data
         console.log(objeto);

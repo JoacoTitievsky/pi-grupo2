@@ -99,7 +99,30 @@ a{
     margin-bottom: 10px;
     justify-content: center;
 }
+
+.generostit{
+    display: flex;
+    background-color: black;
+    color: white;
+    border: 3px rgba(239, 142, 6, 0.934) solid;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
     
+.divpadregenres{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.366);
+    color: white;
+    border: 3px rgba(64, 62, 59, 0.934) solid;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+}
 .contdiscos {
     display: flex;
     justify-content: space-between;
