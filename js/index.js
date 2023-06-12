@@ -44,12 +44,13 @@ fetch(url)
         
     .catch(function (error) {
         console.log("Error: " + error);
-    })
+    }))
 
 /* let album = document.querySelector('.album')
 
 function rellenarCanciones(data) {
     console.log(data.data);
+
     for (let index = 0; index < data.data.length; index++) {
         album.innerHTML += `<a href = "./detallealbum.html?id=${data.data[index].id}">
         <img class= "imgcancion" src=${data.data[index].title} alt=""/>
