@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,20 +8,21 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Proyecto Integrador</title>
 </head>
+
 <body>
     <header>
         <section class="logo">
             <img class="imglogo" src="./img/MUSIC (2).png" alt="">
         </section>
         <section>
-            <a href = "./detallealbum.html?id=${data.result[index].id}">
-                <img class= "imgcancion" src="" alt=""/>
+            <a href="./detallealbum.html?id=${data.result[index].id}">
+                <img class="imgcancion" src="" alt="" />
             </a>
             <div class="contenedor-form">
                 <article class="art-form">
-                    <form id="buscador" class="form-result"action="./resultadobusqueda.html" method="get">
-                        <input  type="text" name="buscar" id="textoBuscado" required>
-                        <button class="buttonart"type="submit">Buscar</button>
+                    <form id="buscador" class="form-result" action="./resultadobusqueda.html" method="get">
+                        <input type="text" name="buscar" id="textoBuscado" required>
+                        <button class="buttonart" type="submit">Buscar</button>
                     </form>
                 </article>
             </div>
@@ -34,58 +36,54 @@
                     <li><a href="./genres.html">GENEROS</a> </li>
                 </ul>
             </nav>
-            </section>
-        </header>
-        <main>
-        <div class="titulopadre">
-            <div class="divpadrecanc">
-                <h3>
-                    Canciones
-                </h3>
-                <a href = "">
-                    <img class= "imgcancion" src="" alt=""/>
-                    <h3 class="nombreartista" src="" alt=""></h3>
-                    <h4 class="nombrealbum" src="" alt=""></h4>
-                    </a>
-                <div class="album"></div>
-            </div>
-        </div>
-       
-        <section>
-            <article class="contdiscos"></article>
         </section>
-        
+    </header>
+    <main>
+
+        <h3 class="cancionestit">
+            Canciones
+        </h3>
+        <div class="divpadrecanc">
+            <a href="">
+                <h2 class="nombrecancion"></h2>
+                <img class="imgcancion" src="" alt="" />
+                <h3 class="nombrealbum">
+                    </h4>
+                    <h4 class="nombreartista"></h4>
+            </a>
+        </div>
+
         <section>
-            <div class="titulopadre">
-                <div class="divpadredisc">
-                    <h3>
-                        Álbumes
-                    </h3>
-                </div>
+            <h3>
+                Álbumes
+            </h3>
+            <div class="divpadredisc">
+                <!-- TERMINAR -->
             </div>
+
             <article class="contalbum">
             </article>
         </section>
 
         <section>
-            <div class="titulopadre">
-                <div class="divpadreart">
-                    <h3>
-                        Artistas
-                    </h3>
-                </div>
+            <h3>
+                Artistas
+            </h3>
+            <div class="divpadreart">
+                
             </div>
             <article class="contart">
             </article>
         </section>
     </main>
-        </main>
-        <footer class="foot">
-            <p>Joaquin Titievsky, Pilar Canil, Antonella Plati</p>
-        </footer>
-        <script src="./js/index.js"></script>
-    
+    </main>
+    <footer class="foot">
+        <p>Joaquin Titievsky, Pilar Canil, Antonella Plati</p>
+    </footer>
+    <script src="./js/index.js"></script>
+
 </body>
+
 </html>
 
 <!-- 
@@ -117,4 +115,3 @@
         localstorage.setItem('favoritos', favoritoToString)
     })
  -->
-

@@ -18,6 +18,7 @@ if(campoBuscar.value.length == 0) {
 let topalbums = ""
 let imgcancion= document.querySelector('.imgcancion')
 
+// Canciones
 fetch(url)
     .then(function (response) {
         return response.json()
@@ -25,19 +26,16 @@ fetch(url)
     .then(function (data) {
         console.log(data);
 
-        // rellenarCanciones(data.tracks)
-        // rellenarCanciones(data.albums)
-        // rellenarCanciones(data.artists)
-        // rellenarCanciones(data.playlists)
         
-        let album = document.querySelector('.album')
+        let canciones = document.querySelector('.divpadrecanc')
         let objeto = data.tracks.data
         console.log(objeto);
-        for (let index = 0; index < objeto.length; index++) {
-            album.innerHTML += `<a href = "./detallealbum.html?id=${objeto[index].id}">
+        for (let index = 0; index < 5; index++) {
+            canciones.innerHTML += `<a href = "./detallealbum.html?id=${objeto[index].id}">
+            <h2 class="nombrecancion">${objeto[index].album.title}</h2>
             <img class= "imgcancion" src=${objeto[index].album.cover} alt="${objeto[index].title}"/>
-            <h3 class="nombreartista">${objeto[index].artist.name}</h3>
-            <h4 class="nombrealbum">${objeto[index].album.title}</h4>
+            <h3 class="nombrealbum">${objeto[index].album.title}</h4>
+            <h4 class="nombreartista">${objeto[index].artist.name}</h4>
             </a>`
         }
     })
@@ -46,15 +44,49 @@ fetch(url)
         console.log("Error: " + error);
     })
 
-/* let album = document.querySelector('.album')
+// Albumes
+fetch(url)
+    .then(function (response) {
+        return response.json()
+    })
+    .then(function (data) {
+        console.log(data);
 
-function rellenarCanciones(data) {
-    console.log(data.data);
-    for (let index = 0; index < data.data.length; index++) {
-        album.innerHTML += `<a href = "./detallealbum.html?id=${data.data[index].id}">
-        <img class= "imgcancion" src=${data.data[index].title} alt=""/>
-        <h3 class="nombreartista">${data.data[index].artists}</h3>
-        <h4 class="nombrealbum">${data.data[index].albums}</h4>
-        </a>`
-    }
-} */
+        
+        let albumes = document.querySelector('.divpadredisc')
+        let objeto = data.tracks.data
+        console.log(objeto);
+        for (let index = 0; index < 5; index++) {
+            albumes.innerHTML += `<a href = "./detallealbum.html?id=${objeto[index].id}">
+            <img class= "imgcancion" src=${objeto[index].album.cover} alt="${objeto[index].title}"/>
+            <h3 class="nombrealbum">${objeto[index].album.title}</h3>
+            </a>`
+        }
+    })
+        
+    .catch(function (error) {
+        console.log("Error: " + error);
+    })
+// Artista
+fetch(url)
+    .then(function (response) {
+        return response.json()
+    })
+    .then(function (data) {
+        console.log(data);
+
+        
+        let artista = document.querySelector('.divpadreart')
+        let objeto = data.tracks.data
+        console.log(objeto);
+        for (let index = 0; index < 5; index++) {
+            artista.innerHTML += `<a href = "./detallealbum.html?id=${objeto[index].id}">
+            <img class= "imgartista" src=${objeto[index].artist.picture} alt="${objeto[index].title}"/>
+            <h3 class="nombrealbum">${objeto[index].album.title}</h3>
+            </a>`
+        }
+    })
+        
+    .catch(function (error) {
+        console.log("Error: " + error);
+    })

@@ -4,6 +4,11 @@ body {
 
 }
 
+a{
+    color: white;
+    text-decoration: none;
+
+}
 .logo {
     display: flex;
     justify-content: center;
@@ -73,17 +78,28 @@ body {
 
 .divpadrecanc {
     display: flex;
+    background-color: rgba(0, 0, 0, 0.366);
+    color: white;
+    border: 3px rgba(64, 62, 59, 0.934) solid;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.cancionestit{
+    display: flex;
     background-color: black;
     color: white;
     border: 3px rgba(239, 142, 6, 0.934) solid;
     padding: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
-    align-items: center;
     justify-content: center;
 }
-
-
+    
 .contdiscos {
     display: flex;
     justify-content: space-between;
@@ -164,15 +180,7 @@ body {
     margin-bottom: 20px;
 }
 
-.divalbum {
-    display: flex;
-    background-color: rgba(126, 126, 126, 0.5);
-    width: 80vw;
-    border: 3px rgba(239, 142, 6, 0.934) solid;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
+
 
 .detallealbumpadre {
     display: flex;
@@ -231,3 +239,4 @@ body {
     width: 20px;
     margin-right: 10px;
 }
+
