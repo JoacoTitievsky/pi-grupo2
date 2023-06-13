@@ -3,9 +3,6 @@ let queryStringObj = new URLSearchParams (queryString)
 let valor = queryStringObj.get("buscar")
 console.log(valor)
 
-let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart" + id
-let resultscanciones = document.querySelector(".resultscanciones")
-
 let buscador = document.querySelector('#buscador');
 let campoBuscar = document.querySelector('#textoBuscado');
 
@@ -20,6 +17,9 @@ if(campoBuscar.value.length == 0) {
     this.submit();
 }
 });
+
+let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart" + valor
+let resultscanciones = document.querySelector(".resultscanciones")
 
 fetch(url)
 .then(function(response){
@@ -41,9 +41,9 @@ if (data.data.length == 0){
 } else{
     for (let index = 0; index < data.data.length; index ++){
         document.querySelector(`.resultscanciones`).innerHTML += `<a href = "./detallecancion.html?id=${data.data[index].id}">
-        <img class= "imgcancion" src=${data.data[index].title} alt=""/>
-        <h3 class="nombreartista">${data.data[index].artists}</h3>
-        <h4 class="nombrealbum">${data.data[index].albums}</h4>
+        <img class= "imgcancionsearch" src=${data.data[index].album.cover_medium} alt="${data.data[index].title}"/>
+        <h3 class="nombreartistasearch">${data.data[index].artist.name}</h3>
+        <h4 class="nombrealbumsearch">${data.data[index].title}</h4>
         </a>`
     }
     let noSearch = document.querySelector(".noSearch")
@@ -54,8 +54,8 @@ if (data.data.length == 0){
     console.log(error);
 });
 
-let urlArtista = 
-fetch(urlArtista)
+let urlArtist = "https://api.allorigins.win/raw?url=https://api.deezer.com/artist/" + valor
+fetch(urlArtist)
 .then(function(response){
     return response.json()
 })
@@ -70,14 +70,14 @@ fetch(urlArtista)
 </h3>` 
 
 if (data.data.length == 0){
-    let searchartista = document.querySelector(".searchartista")
+    let searchartista = document.querySelector(".searchArtista")
     searchartista.style.display = "none"
 } else{
     for (let index = 0; index < data.data.length; index ++){
         document.querySelector(`.resultsartistas`).innerHTML += `<a href = "./detallecantante.html?id=${data.data[index].id}">
-        <img class= "imgcancion" src=${data.data[index].title} alt=""/>
-        <h3 class="nombreartista">${data.data[index].artists}</h3>
-        <h4 class="nombrealbum">${data.data[index].albums}</h4>
+        <img class= "imgcancionsearch" src=${data.data[index].picture_medium} alt="${data.data[i].name}"/>
+        <h3 class="nombreartistasearch">${data.data[index].name}</h3>
+        <h4 class="nombrealbumsearch"> Cantidad de albums: ${data.data[i].nb_tracks}</h4>
         </a>`
     }
     let noSearch = document.querySelector(".noSearch")
@@ -89,7 +89,7 @@ if (data.data.length == 0){
 });
 
 
-let urlAlbum = 
+let urlAlbum = "https://api.allorigins.win/raw?url=https://api.deezer.com/album/" + valor
 fetch(urlAlbum)
 .then(function(response){
     return response.json()
@@ -110,9 +110,9 @@ if (data.data.length == 0){
 } else{
     for (let index = 0; index < data.data.length; index ++){
         document.querySelector(`.resultsalbumes`).innerHTML += `<a href = "./detallealbum.html?id=${data.data[index].id}">
-        <img class= "imgcancion" src=${data.data[index].title} alt=""/>
-        <h3 class="nombreartista">${data.data[index].artists}</h3>
-        <h4 class="nombrealbum">${data.data[index].albums}</h4>
+        <img class= "imgcancionsearch" src=${data.data[index].cover_medium} alt=""/>
+        <h3 class="nombreartistasearch">${data.data[index].artist.name}</h3>
+        <h4 class="nombrealbumsearch">${data.data[index].title}</h4>
         </a>`
     }
     let noSearch = document.querySelector(".noSearch")

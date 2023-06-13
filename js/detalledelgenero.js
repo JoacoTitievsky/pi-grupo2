@@ -1,5 +1,5 @@
-let endpoint_charts = "https://api.allorigins.win/raw?url=https://developers.deezer.com/api/chart"
-let endpoint_genero = "https://api.allorigins.win/raw?url=https://developers.deezer.com/api/genre"
+let endpoint_charts = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart"
+let endpoint_genero = "https://api.allorigins.win/raw?url=https://api.deezer.com/genre"
 
 let buscador = document.querySelector('#buscador');
 let campoBuscar = document.querySelector('#textoBuscado');

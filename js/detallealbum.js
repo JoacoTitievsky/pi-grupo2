@@ -1,4 +1,4 @@
-let endpoint_album = "https://api.allorigins.win/raw?url=https://developers.deezer.com/api/album" 
+let endpoint_album = "https://api.allorigins.win/raw?url=https://api.deezer.com/album/"
 
 let buscador = document.querySelector('#buscador');
 let campoBuscar = document.querySelector('#textoBuscado');
