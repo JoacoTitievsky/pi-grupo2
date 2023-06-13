@@ -25,25 +25,17 @@ fetch(url)
     })
     .then(function (data) {
         console.log(data);
-        let canciones = data.tracks
+        let canciones = data
         let a = document.querySelector(".tracklist")
-
-        let queryString = location.search;
-        let queryStringObj = new URLSearchParams(queryString);
-        let i = queryStringObj.get('id') - 1;
-
-        let character = `<article>
-        <img src= ${objeto[index].image} alt='' />
-        <p>ID = ${objeto[index].id}</p><p>Name: ${personajes[i].name}</p>
+        let contenedorCanciones = `<article>
+       
+        <p class="cancion"> Nombre de la Canción: ${canciones.title}</p>
+        <img class="imagen" src="${canciones.album.cover}" alt="${canciones.title}">
+        <p class="album"> Nombre del Album: ${canciones.album.title}</p>
+        <p class="artista"> Nombre del Artista: ${canciones.artist.name}</p>
         </article>`
-        a.innerHTML = character;
-
-        let nombre = personajes[i].name
-        document.querySelector("h1").innerText = `Detalle de ${personajes[i].name}`
-        h1.innerHTML += nombre
+        a.innerHTML += contenedorCanciones
     })
     .catch(function (error) {
         console.log(error);
     });
-
-    // FALTA TERMINAR
