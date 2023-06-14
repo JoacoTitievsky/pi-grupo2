@@ -7,16 +7,16 @@ let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/track/${id}
 let buscador = document.querySelector('#buscador');
 let campoBuscar = document.querySelector('#textoBuscado');
 
-buscador.addEventListener('submit', function (e){
-e.preventDefault();
+buscador.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-if(campoBuscar.value.length == 0) {
-    alert('No puedes enviar el form vacio')
-} else if(campoBuscar.value.length < 3){
-    alert('El termino buscado debe tener mas de 3 caracteres')
-} else {
-    this.submit();
-}
+    if (campoBuscar.value.length == 0) {
+        alert('No puedes enviar el form vacio')
+    } else if (campoBuscar.value.length < 3) {
+        alert('El termino buscado debe tener mas de 3 caracteres')
+    } else {
+        this.submit();
+    }
 });
 
 fetch(url)
@@ -28,14 +28,44 @@ fetch(url)
         let canciones = data
         let a = document.querySelector(".tracklist")
         let contenedorCanciones = `<article>
-       
-        <p class="cancion"> Nombre de la Canción: ${canciones.title}</p>
+        <h2 class="cancion"> Nombre de la Canción: ${canciones.title}</h2>
         <img class="imagen" src="${canciones.album.cover}" alt="${canciones.title}">
-        <p class="album"> Nombre del Album: ${canciones.album.title}</p>
-        <p class="artista"> Nombre del Artista: ${canciones.artist.name}</p>
+        <h3 class="album"> Nombre del Album: ${canciones.album.title}</h3>
+        <h4 class="artista"> Nombre del Artista: ${canciones.artist.name}</h4>
         </article>`
         a.innerHTML += contenedorCanciones
     })
     .catch(function (error) {
         console.log(error);
     });
+
+let favoritos = [];
+
+
+let recuperoStorage = localStorage.getItem('favoritos');
+
+
+if (recuperoStorage != null) {
+    favoritos = JSON.parse(recuperoStorage);
+}
+
+let fav = document.querySelector('.fav');
+
+
+if (favoritos.includes(id)) {
+    fav.innerText = 'Quitar de Favoritos'
+}
+
+fav.addEventListener('click', function () {
+    if (favoritos.includes(id)) {
+        let indice = favoritos.indexOf(id)
+        favoritos.splice(indice, 1);
+        fav.innerText = 'Agregar a mi playlist'
+    } else {
+        favoritos.push(id);
+        fav.innerText = 'Sacar de mi playlist'
+    }
+
+    let favoritosToString = JSON.stringify(favoritos);
+    localStorage.setItem('favoritos', favoritosToString)
+})
