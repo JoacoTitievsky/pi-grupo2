@@ -109,7 +109,10 @@ a{
     margin-top: 10px;
     margin-bottom: 10px;
     justify-content: center;
+    flex-wrap: wrap;
+    
 }
+
     
 .divpadregenres{
     display: flex;
@@ -119,15 +122,20 @@ a{
     padding: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
-    align-items: flex-start;
-    justify-content: space-between;
+    justify-content:space-between;
     flex-direction: row;
+     flex-wrap: wrap;
+  
+
 }
+
+
 .contdiscos {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
 }
+
 
 .divpadredisc {
     display: flex;
@@ -140,6 +148,7 @@ a{
     align-items: flex-start;
     justify-content: space-around;
     flex-direction: row;
+
 }
 
 

@@ -1,1 +1,1 @@
-let endpoint_artista = "https://api.allorigins.win/raw?url=https://developers.deezer.com/api/artist"l
+let endpoint_artista = "https://api.allorigins.win/raw?url=https://developers.deezer.com/api/artist"
