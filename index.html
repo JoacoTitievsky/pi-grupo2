@@ -85,33 +85,3 @@
 </body>
 
 </html>
-
-<!-- 
-    Guardar en Favoritos
-    let favoritos =[]
-    let recuperoStorage = localStorage.getItem("favoritos")
-
-    if (recuperoStorage != null){
-        favoritos = JSON.parse(recuperoStorage)
-    }
-
-    let fav = document.querySelector('#favaaaa');
-
-    if(favoritos.includes(idpersonaje)){
-        fav.innerText = 'Quitar de Favoritos'
-    }
-
-    fav.addEventListener('click', function(){
-        if (favoritos.includes(idpersonajes)){
-            let indice = favoritos.indexOf(idpersonaje)
-            favoritos.splice(indice, 1);
-            fav.innerText = 'Agregar a favorito'
-        } else{
-            favoritos.push(idpersonaje);
-            fav.innerText = 'Quitar a Favorito'
-        }
-
-        let favoritosToString = JSON.stringify(favoritos);
-        localstorage.setItem('favoritos', favoritoToString)
-    })
- -->
