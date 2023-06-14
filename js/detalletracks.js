@@ -53,7 +53,7 @@ let fav = document.querySelector('.fav');
 
 
 if (favoritos.includes(id)) {
-    fav.innerText = 'Quitar de Favoritos'
+    fav.innerText = 'Sacar de mi Playlist'
 }
 
 fav.addEventListener('click', function () {
