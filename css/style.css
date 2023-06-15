@@ -355,3 +355,8 @@ h4{
     text-decoration: none;
     border: 3px rgba(243, 241, 238, 0.934) solid;
 }
+
+.secciones{
+    border-color: white;
+    background-color: rgba(128, 128, 128, 0.084);
+}

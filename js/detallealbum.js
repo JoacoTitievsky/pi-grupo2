@@ -1,4 +1,8 @@
-let endpoint_album = "https://api.allorigins.win/raw?url=https://api.deezer.com/album/"
+let qs = location.search;
+let qsObj = new URLSearchParams(qs)
+let id = qsObj.get('id');
+
+let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/album/${id}`;
 
 let buscador = document.querySelector('#buscador');
 let campoBuscar = document.querySelector('#textoBuscado');
@@ -15,8 +19,6 @@ if(campoBuscar.value.length == 0) {
 }
 });
 
-
-
 function formulario() {
     let termino = document.querySelectorAll('.form-result');
     if (termino.value.length < 3) {
@@ -25,6 +27,27 @@ function formulario() {
     }
     return true;
 }
+
+fetch(url)
+    .then(function (response) {
+        return response.json()
+    })
+    .then(function (data) {
+        console.log(data);
+        let album = data
+        let a = document.querySelector(".albumlist")
+        let contenedorAlbum = `<article>
+        <h3 class="album"> Nombre del Album: ${album.title}</h3>
+        <img class="imagen" src="${album.tracks.album.cover}" alt="">
+        <h4 class="artista"> Nombre del Artista: ${album.artist.name}</h4>
+        <h4 class="genero">Género: ${album.genres.data[0].name}</h4>
+        </article>`
+        a.innerHTML += contenedorAlbum
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+
 
 
 
