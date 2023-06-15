@@ -337,3 +337,21 @@ h4{
     color: white;
 }
 
+.titulosearch{
+    background-color: rgba(0, 0, 0, 0.366);
+    border: 3px rgba(243, 241, 238, 0.934) solid;
+    display: inline-block;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    
+}
+
+.detallecancion{
+    background-color: rgba(0, 0, 0, 0.366);
+    display: inline-block;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    border: 3px rgba(243, 241, 238, 0.934) solid;
+}
