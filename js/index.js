@@ -31,15 +31,15 @@ fetch(url)
         let objeto = data.tracks.data
         console.log(objeto);
         for (let index = 0; index < 5; index++) {
-            canciones.innerHTML += `<a href = "./detallecancion.html?id=${objeto[index].id}">
+            canciones.innerHTML += `<article><a href = "./detallecancion.html?id=${objeto[index].id}">
             <h2 class="nombrecancion">${objeto[index].album.title}</h2>
             <img class= "imgcancion" src=${objeto[index].album.cover} alt="${objeto[index].title}"/>
             <h3 class="nombrealbum">${objeto[index].album.title}</h3>
             <h4 class="nombreartista">${objeto[index].artist.name}</h4>
-            </a>`
+            </a></article>`
         }
     })
-        
+
     .catch(function (error) {
         console.log("Error: " + error);
     })
@@ -52,15 +52,15 @@ fetch(url)
     .then(function (data) {
         console.log(data);
 
-        
+    
         let albumes = document.querySelector('.divpadredisc')
         let objeto = data.tracks.data
         console.log(objeto);
         for (let index = 0; index < 5; index++) {
-            albumes.innerHTML += `<a href = "./detallealbum.html?id=${objeto[index].id}">
+            albumes.innerHTML += `<article><a href = "./detallealbum.html?id=${objeto[index].id}">
             <img class= "imgcancion" src=${objeto[index].album.cover} alt="${objeto[index].title}"/>
             <h3 class="nombrealbum">${objeto[index].album.title}</h3>
-            </a>`
+            </article></a>`
         }
     })
         
@@ -80,10 +80,10 @@ fetch(url)
         let objeto = data.tracks.data
         console.log(objeto);
         for (let index = 0; index < 5; index++) {
-            artista.innerHTML += `<a href = "./detallecantante.html?id=${objeto[index].id}">
+            artista.innerHTML += `<article><a href = "./detallecantante.html?id=${objeto[index].id}">
             <img class= "imgartista" src=${objeto[index].artist.picture} alt="${objeto[index].title}"/>
             <h4 class="nombreartista">${objeto[index].artist.name}</h4> 
-            </a>`
+            </article></a>`
        
         }
     })
