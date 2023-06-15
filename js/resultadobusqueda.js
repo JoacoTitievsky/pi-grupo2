@@ -27,22 +27,21 @@ fetch(url)
 
 .then(function (data) {
     console.log(data);
-    document.querySelector(".results").innerHTML += `<h3 class="titulosearch">
-    Termino buscado : "${valor}"
-</h3>
-<h3 class="titulosearch">
-    Resultados que coinciden:
-</h3>` 
+    document.querySelector(".results").innerHTML += 
+    `<h1 class="titulosearch"> TÉRMINO BUSCADO : "${valor}" </h1>
+<h1 class="titulosearch">
+    RESULTADOS QUE COINCIDEN:
+</h1>` 
 
 if (data.data.length === 0) {
     document.querySelector(".resultscanciones").innerHTML = "No se encuentran coincidencias";
   } else {
     for (let index = 0; index < 5; index++) {
-    document.querySelector(`.resultscanciones`).innerHTML += `<a href="./detallealbum.html?id=${data.data[index].id}">
-    <img class="imgcancionsearch" src=${data.data[index].cover_medium} alt=""/>
+    document.querySelector(`.resultscanciones`).innerHTML += `<a href="./detallecancion.html?id=${data.data[index].id}">
+    <h2 class="nombrecancionsearch">Nombre Canción: ${data.data[index].title}</h2>
+    <img class="imgcancionsearch" src=${data.data[index].album.cover} alt=""/>
     <h3 class="nombreartistasearch">Nombre Artista: ${data.data[index].artist.name}</h3>
     <h4 class="nombrealbumsearch">Nombre Álbum: ${data.data[index].album.title}</h4>
-    <h4 class="nombrecancionsearch">Nombre Canción: ${data.data[index].title}</h4>
     </a>`;
     }
   }

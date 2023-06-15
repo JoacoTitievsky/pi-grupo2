@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,20 +8,21 @@
     <title>Search Results</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <header>
         <section class="logo">
             <img class="imglogo" src="./img/MUSIC (2).png" alt="">
         </section>
         <section>
-            <a href = "./detallealbum.html?id=${data.result[index].id}">
-                <img class= "imgcancion" src="" alt=""/>
+            <a href="./detallealbum.html?id=${data.result[index].id}">
+                <img class="imgcancion" src="" alt="" />
             </a>
             <div class="contenedor-form">
                 <article class="art-form">
-                    <form id="buscador" class="form-result"action="./resultadobusqueda.html" method="get">
-                        <input  type="text" name="buscar" id="textoBuscado" required>
-                        <button class="buttonart"type="submit">Buscar</button>
+                    <form id="buscador" class="form-result" action="./resultadobusqueda.html" method="get">
+                        <input type="text" name="buscar" id="textoBuscado" required>
+                        <button class="buttonart" type="submit">Buscar</button>
                     </form>
                 </article>
             </div>
@@ -34,22 +36,26 @@
                     <li><a href="./genres.html">GENEROS</a> </li>
                 </ul>
             </nav>
-            </section>
-    <main>
-        <section class="search">
-            <article class="results">
-
-            </article>
-            <article class="resultscanciones">
-
-            </article>
         </section>
-    </main>
+        <main>
+            <section class="search">
+                <article class="results">
+    
+                </article>
+                <article class="resultscanciones">
+                    <h2 class="nombrecancionsearch"></h2>
+                    <img class="imgcancionsearch" src="" alt="" />
+                    <h3 class="nombreartistasearch"></h3>
+                    <h4 class="nombrealbumsearch"></h4>
+                </article>
+            </section>
+        </main>
 
-    <footer class="foot">
-        <p>Joaquin Titievsky, Pilar Canil, Antonella Plati</p>
-    </footer>
+        <footer class="foot">
+            <p>Joaquin Titievsky, Pilar Canil, Antonella Plati</p>
+        </footer>
 
-    <script src="./js/resultadobusqueda.js"></script>
+        <script src="./js/resultadobusqueda.js"></script>
 </body>
+
 </html>
