@@ -1,3 +1,4 @@
+// NO FUNCIONA
 let qs = location.search;
 let qsObj = new URLSearchParams(qs)
 let id = qsObj.get('id');
