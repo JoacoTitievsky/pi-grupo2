@@ -3,20 +3,20 @@ let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart"
 let buscador = document.querySelector('#buscador');
 let campoBuscar = document.querySelector('#textoBuscado');
 
-buscador.addEventListener('submit', function (e){
-e.preventDefault();
+buscador.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-if(campoBuscar.value.length == 0) {
-    alert('No puedes enviar el form vacio')
-} else if(campoBuscar.value.length < 3){
-    alert('El termino buscado debe tener mas de 3 caracteres')
-} else {
-    this.submit();
-}
+    if (campoBuscar.value.length == 0) {
+        alert('No puedes enviar el form vacio')
+    } else if (campoBuscar.value.length < 3) {
+        alert('El termino buscado debe tener mas de 3 caracteres')
+    } else {
+        this.submit();
+    }
 });
 
 
-let imgcancion= document.querySelector('.imgcancion')
+let imgcancion = document.querySelector('.imgcancion')
 
 fetch(url)
     .then(function (response) {
@@ -51,7 +51,7 @@ fetch(url)
     .then(function (data) {
         console.log(data);
 
-    
+
         let albumes = document.querySelector('.divpadredisc')
         let objeto = data.albums.data
         console.log(objeto);
@@ -62,7 +62,7 @@ fetch(url)
             </article></a>`
         }
     })
-        
+
     .catch(function (error) {
         console.log("Error: " + error);
     })
@@ -74,7 +74,7 @@ fetch(url)
     .then(function (data) {
         console.log(data);
 
-        
+
         let artista = document.querySelector('.divpadreart')
         let objeto = data.artists.data
         console.log(objeto);
@@ -83,26 +83,28 @@ fetch(url)
             <img class= "imgartista" src=${objeto[index].picture_medium} alt="${objeto[index].title}"/>
             <h4 class="nombreartista">${objeto[index].name}</h4> 
             </article></a>`
-       
+
         }
     })
-        
+
     .catch(function (error) {
         console.log("Error: " + error);
     })
 
-    let botonOscuro = document.querySelector(".botonOscuro")
-    let body = document.querySelector("body")
 
-    botonOscuro.addEventListener('click', function(e){
-        if (botonOscuro.innerText == "Modo Claro"){
-            body.style.background = 'white';
-            this.innerText = 'Modo Oscuro';
-        } else{
-            body.style.background = '#000000e2';
-            this.innerText = 'Modo Claro';
-        }
-    })
+let botonOscuro = document.querySelector(".botonOscuro")
+let body = document.querySelector("body")
 
-    
-      
+botonOscuro.addEventListener('click', function (e) {
+    if (botonOscuro.innerText == "Modo Claro") {
+        body.style.background = 'white';
+        this.innerText = 'Modo Oscuro';
+    } else {
+        body.style.background = '#000000e2';
+        this.innerText = 'Modo Claro';
+    }
+})
+
+
+
+
