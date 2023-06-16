@@ -46,27 +46,27 @@ let recuperoStorage = localStorage.getItem('playlist');
 
 
 if (recuperoStorage != null) {
-    favoritos = JSON.parse(recuperoStorage);
+    playlist = JSON.parse(recuperoStorage);
 }
 
 let fav = document.querySelector('.fav');
 
 
-if (favoritos.includes(id)) {
+if (playlist.includes(id)) {
     fav.innerText = 'Sacar de mi Playlist'
 }
 
 fav.addEventListener('click', function () {
-    if (favoritos.includes(id)) {
-        let indice = favoritos.indexOf(id)
-        favoritos.splice(indice, 1);
+    if (playlist.includes(id)) {
+        let indice = playlist.indexOf(id)
+        playlist.splice(indice, 1);
         fav.innerText = 'Agregar a mi playlist'
     } else {
-        favoritos.push(id);
+        playlist.push(id);
         fav.innerText = 'Sacar de mi playlist'
     }
 
-    let favoritosToString = JSON.stringify(favoritos);
+    let favoritosToString = JSON.stringify(playlist);
     localStorage.setItem('playlist', favoritosToString)
 })
 
