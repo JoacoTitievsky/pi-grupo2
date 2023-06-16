@@ -38,9 +38,16 @@ if (data.data.length === 0) {
   } else {
     for (let index = 0; index < 5; index++) {
     document.querySelector(`.resultscanciones`).innerHTML += `<a href="./detallecancion.html?id=${data.data[index].id}">
-    <h2 class="nombrecancionsearch">Nombre Canción: ${data.data[index].title}</h2>
+    <h3 class="nombrecancionsearch">Nombre Canción: ${data.data[index].title}</h3>
     <img class="imgcancionsearch" src=${data.data[index].album.cover} alt=""/>
+    </a>`;
+
+
+    document.querySelector(`.resultsartista`).innerHTML += `<a href="./detallecantante.html?id=${data.data[index].id}">
     <h3 class="nombreartistasearch">Nombre Artista: ${data.data[index].artist.name}</h3>
+    </a>`;
+
+    document.querySelector(`.resultsalbum`).innerHTML += `<a href="./detallealbum.html?id=${data.data[index].id}">
     <h4 class="nombrealbumsearch">Nombre Álbum: ${data.data[index].album.title}</h4>
     </a>`;
     }

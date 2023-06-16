@@ -2,7 +2,7 @@ let qs = location.search;
 let qsObj = new URLSearchParams(qs)
 let id = qsObj.get('id');
 
-let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/track/${id}`;
+let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${id}`;
 
 let buscador = document.querySelector('#buscador');
 let campoBuscar = document.querySelector('#textoBuscado');
@@ -25,12 +25,13 @@ fetch(url)
     })
     .then(function (data) {
         console.log(data);
-        let artistas = document.querySelector('.divpadreartistas')
-        let objeto = data.data
-        for (let index = 1; index < 10; index++) {
+        let artistas = document.querySelector('.detalleartista')
+        let objeto = data
+        for (let index = 1; index < 5; index++) {
             let contenedorArtista = `<article>
-            <img class="imagen" src="${objeto.album.cover}" alt="">
-            <h4 class="artista"> Nombre del Artista: ${objeto.artist.name}</h4>
+            <img class="imagen" src="${objeto.picture}" alt="">
+            <h2 class="nombreartista"> Nombre del Artista: ${objeto.name}</h2>
+            <h3 class="albumesartista">Albumes de ${objeto.artist.name}: </h3>
             </article>`
             artistas.innerHTML += contenedorArtista
         }
