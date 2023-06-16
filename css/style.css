@@ -1,6 +1,5 @@
 body {
-    background-color: grey;
-    color: black;
+    background-color:rgba(0, 0, 0, 0.886);
 
 }
 
@@ -24,7 +23,7 @@ a{
 }
 
 .foot {
-    background-color: rgb(15, 15, 15);
+    background-color: rgb(94, 91, 91);
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     font-size: medium;
@@ -65,10 +64,7 @@ a{
     flex-wrap: wrap;
 }
 
-.buttonart {
-    background-color: white;
-    height: 37px;
-}
+
 
 .titulopadre {
     display: flex;
@@ -78,9 +74,9 @@ a{
 
 .divpadrecanc {
     display: flex;
-    background-color: rgba(0, 0, 0, 0.366);
+    background-color: rgba(49, 47, 47, 0.366);
     color: white;
-    border: 3px rgba(64, 62, 59, 0.934) solid;
+    border: 3px rgba(236, 234, 231, 0.934) solid;
     padding: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -117,9 +113,9 @@ a{
 .divpadregenres{
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(0, 0, 0, 0.366);
+    background-color: rgba(49, 47, 47, 0.366);
     color: white;
-    border: 3px rgba(64, 62, 59, 0.934) solid;
+    border: 3px rgba(236, 234, 231, 0.934) solid;
     padding: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -156,9 +152,9 @@ a{
 
 .divpadredisc {
     display: flex;
-    background-color: rgba(0, 0, 0, 0.366);
+    background-color: rgba(49, 47, 47, 0.366);
     color: white;
-    border: 3px rgba(64, 62, 59, 0.934) solid;
+    border: 3px rgba(236, 234, 231, 0.934) solid;
     padding: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -172,9 +168,9 @@ a{
 
 .divpadreart {
     display: flex;
-    background-color: rgba(0, 0, 0, 0.366);
+    background-color: rgba(49, 47, 47, 0.366);
     color: white;
-    border: 3px rgba(64, 62, 59, 0.934) solid;
+    border: 3px rgba(236, 234, 231, 0.934) solid;
     padding: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -348,15 +344,86 @@ h4{
 }
 
 .detallecancion{
-    background-color: rgba(0, 0, 0, 0.366);
+    background-color: black;
+    color: white;
+    border: 3px rgba(243, 241, 238, 0.934) solid;
     display: inline-block;
     padding: 15px 30px;
-    color: white;
     text-decoration: none;
-    border: 3px rgba(243, 241, 238, 0.934) solid;
 }
 
 .secciones{
     border-color: white;
     background-color: rgba(128, 128, 128, 0.084);
+}
+
+.generolista{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.366);
+    color: white;
+    border: 3px rgba(64, 62, 59, 0.934) solid;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content:space-between;
+    flex-direction: row;
+  
+}
+
+.generolista article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.generolista article a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 .artistagenero{
+    display: flex;
+    justify-content: center;
+}
+
+.generolist{
+    display: flex;
+    
+    background-color: rgba(0, 0, 0, 0.366);
+    color: white;
+    border: 3px rgba(64, 62, 59, 0.934) solid;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content:center;
+    flex-direction: row;
+  
+}
+
+.generolist article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.generolist article a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button.fav{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 5px;
+    flex-wrap: wrap;
 }

@@ -49,7 +49,7 @@ fetch(url_dos)
     for (let index = 0; index < 10; index++) {
         document.querySelector('.generolista').innerHTML += `<a href="./detallecantante.html?id=${data.artists.data[index].id}">
         <h3 class="artistagenero">${data.artists.data[index].name}</h3>
-        <img class="imagenartistagenero" src="${data.artists.data[index].picture_small}" alt="">
+        <img class="imagenartistagenero" src="${data.artists.data[index].picture_medium}" alt="">
         </a>`      
     }   
 })
