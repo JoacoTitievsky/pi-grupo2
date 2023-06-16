@@ -26,10 +26,10 @@ fetch(url)
     .then(function (data) {
         console.log(data);
         let canciones = data
-        let a = document.querySelector(".tracklist")
-        let contenedorCanciones = `<article>
+        let a = document.querySelector(".generolist")
+        let contenedorCanciones = `<article class="song">
         <h2 class="cancion"> Nombre de la Canción: ${canciones.title}</h2>
-        <img class="imagen" src="${canciones.album.cover}" alt="${canciones.title}">
+        <img class="imagen" src="${canciones.album.cover_medium}" alt="${canciones.title}">
         <h3 class="album"> Nombre del Album: ${canciones.album.title}</h3>
         <h4 class="artista"> Nombre del Artista: ${canciones.artist.name}</h4>
         </article>`

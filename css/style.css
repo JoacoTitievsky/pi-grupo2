@@ -1,14 +1,14 @@
 body {
-    background-color: grey;
-    color: black;
+    background-color: rgba(0, 0, 0, 0.886);
 
 }
 
-a{
+a {
     color: white;
     text-decoration: none;
 
 }
+
 .logo {
     display: flex;
     justify-content: center;
@@ -24,13 +24,18 @@ a{
 }
 
 .foot {
-    background-color: rgb(15, 15, 15);
+    background-color: rgb(94, 91, 91);
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    font-size: medium;
+    font-size: 18px;
     padding: 1px 2px;
     border-radius: 50px;
     color: white;
+    margin: 3px;
+}
+
+footer.foot {
+    margin-top: 40px;
 }
 
 .navig {
@@ -44,11 +49,15 @@ a{
 }
 
 .navig li a {
-    background-color: rgb(186, 176, 176);
+    background-color: #8c9e92;
+    color: #ffffff;
     display: inline-block;
     padding: 15px 30px;
     color: white;
     text-decoration: none;
+    border-radius: 10px;
+    display: inline-block;
+    font-weight: bold;
 }
 
 .art-form {
@@ -65,10 +74,7 @@ a{
     flex-wrap: wrap;
 }
 
-.buttonart {
-    background-color: white;
-    height: 37px;
-}
+
 
 .titulopadre {
     display: flex;
@@ -78,9 +84,9 @@ a{
 
 .divpadrecanc {
     display: flex;
-    background-color: rgba(0, 0, 0, 0.366);
+    background-color: rgba(49, 47, 47, 0.366);
     color: white;
-    border: 3px rgba(64, 62, 59, 0.934) solid;
+    border: 3px rgba(236, 234, 231, 0.934) solid;
     padding: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -89,7 +95,7 @@ a{
     flex-direction: row;
 }
 
-.cancionestit{
+.cancionestit {
     display: flex;
     background-color: black;
     color: white;
@@ -100,7 +106,7 @@ a{
     justify-content: center;
 }
 
-.generostit{
+.generostit {
     display: flex;
     background-color: black;
     color: white;
@@ -110,28 +116,28 @@ a{
     margin-bottom: 10px;
     justify-content: center;
     flex-wrap: wrap;
-    
+
 }
 
-    
-.divpadregenres{
+
+.divpadregenres {
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(0, 0, 0, 0.366);
+    background-color: rgba(49, 47, 47, 0.366);
     color: white;
-    border: 3px rgba(64, 62, 59, 0.934) solid;
+    border: 3px rgba(236, 234, 231, 0.934) solid;
     padding: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
-    justify-content:space-between;
+    justify-content: space-between;
     flex-direction: row;
-     flex-wrap: wrap;
-  
+    flex-wrap: wrap;
+
 
 }
 
 
-.divpadregenres article{
+.divpadregenres article {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -139,7 +145,7 @@ a{
     padding: 10px;
 }
 
-.divpadregenres article a{
+.divpadregenres article a {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -156,9 +162,9 @@ a{
 
 .divpadredisc {
     display: flex;
-    background-color: rgba(0, 0, 0, 0.366);
+    background-color: rgba(49, 47, 47, 0.366);
     color: white;
-    border: 3px rgba(64, 62, 59, 0.934) solid;
+    border: 3px rgba(236, 234, 231, 0.934) solid;
     padding: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -172,9 +178,9 @@ a{
 
 .divpadreart {
     display: flex;
-    background-color: rgba(0, 0, 0, 0.366);
+    background-color: rgba(49, 47, 47, 0.366);
     color: white;
-    border: 3px rgba(64, 62, 59, 0.934) solid;
+    border: 3px rgba(236, 234, 231, 0.934) solid;
     padding: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -183,7 +189,7 @@ a{
     flex-direction: row;
 }
 
-.divpadreart article{
+.divpadreart article {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -191,14 +197,14 @@ a{
     padding: 10px;
 }
 
-.divpadreart article a{
+.divpadreart article a {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.divpadredisc article{
+.divpadredisc article {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -206,14 +212,14 @@ a{
     padding: 10px;
 }
 
-.divpadredisc article a{
+.divpadredisc article a {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.divpadrecanc article{
+.divpadrecanc article {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -221,15 +227,19 @@ a{
     padding: 10px;
 }
 
-.divpadrecanc article a{
+.divpadrecanc article a {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 .maindetallealbum {
-    display: flex;
-    flex-direction: column;
+    text-align: center;
+}
+
+.maindetallecantante {
+    text-align: center;
 }
 
 .sectiondetallealbum {
@@ -249,13 +259,13 @@ a{
     flex-direction: column;
 }
 
-.divcancionesalbum{
+.divcancionesalbum {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.artdetallecancionpadre{
+.artdetallecancionpadre {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -264,7 +274,7 @@ a{
     margin-bottom: 20px;
 }
 
-.divartcancion{
+.divartcancion {
     display: flex;
     background-color: rgba(126, 126, 126, 0.5);
     width: 80vw;
@@ -274,14 +284,14 @@ a{
     flex-direction: column;
 }
 
-.contfav{
+.contfav {
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 200px;
 }
 
-.contfav2{
+.contfav2 {
     margin-top: 20px;
     padding: 10px;
     display: flex;
@@ -293,14 +303,14 @@ a{
     border: 3px rgba(243, 241, 238, 0.934) solid;
 }
 
-.favorito{
+.favorito {
     text-decoration: none;
     margin-top: 20px;
     width: 20px;
     margin-right: 10px;
 }
 
-.artistastit{
+.artistastit {
     display: flex;
     background-color: black;
     color: white;
@@ -311,7 +321,7 @@ a{
     justify-content: center;
 }
 
-.albumestit{
+.albumestit {
     display: flex;
     background-color: black;
     color: white;
@@ -322,41 +332,213 @@ a{
     justify-content: center;
 }
 
-h1{
-    color: white;
-}
-h2{
+h1 {
     color: white;
 }
 
-h3{
+h2 {
     color: white;
 }
 
-h4{
+h3 {
     color: white;
 }
 
-.titulosearch{
-    background-color: rgba(0, 0, 0, 0.366);
-    border: 3px rgba(243, 241, 238, 0.934) solid;
+h4 {
+    color: white;
+}
+
+.titulosearch {
+    background-color: #8c9e92;
+    color: #ffffff;
     display: inline-block;
     padding: 15px 30px;
     color: white;
     text-decoration: none;
-    
+    border-radius: 10px;
+
 }
 
-.detallecancion{
-    background-color: rgba(0, 0, 0, 0.366);
+.detallecancion {
+    background-color: black;
+    color: white;
+    border: 3px rgba(243, 241, 238, 0.934) solid;
     display: inline-block;
     padding: 15px 30px;
-    color: white;
     text-decoration: none;
-    border: 3px rgba(243, 241, 238, 0.934) solid;
 }
 
-.secciones{
+.secciones {
     border-color: white;
     background-color: rgba(128, 128, 128, 0.084);
 }
+
+.generolista {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(49, 47, 47, 0.366);
+    color: white;
+    border: 3px rgba(236, 234, 231, 0.934) solid;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    flex-direction: row;
+
+}
+
+.generolista article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.generolista article a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 .artistagenero {
+    display: flex;
+    justify-content: center;
+}
+
+.generolist {
+    display: flex;
+    width: 400px;
+    padding: 20px;
+    background-color: rgba(49, 47, 47, 0.366);
+    color: white;
+    border: 3px rgba(236, 234, 231, 0.934) solid;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.generolist article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.generolist article a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button.fav {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #8c9e92;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.song {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+input#textoBuscado {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button.buttonart {
+    background-color: #8c9e92;
+    color: #ffffff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.detailtrack {
+    text-align: center;
+}
+
+.maingenero {
+    text-align: center;
+}
+
+.results {
+    color: white;
+    text-align: center;
+}
+
+.resultscanciones {
+    background-color: rgba(49, 47, 47, 0.366);
+    color: white;
+    border: 3px rgba(236, 234, 231, 0.934) solid;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.resultsartista {
+    background-color: rgba(49, 47, 47, 0.366);
+    color: white;
+    border: 3px rgba(236, 234, 231, 0.934) solid;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.resultsalbum {
+    background-color: rgba(49, 47, 47, 0.366);
+    color: white;
+    border: 3px rgba(236, 234, 231, 0.934) solid;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.btn-playlist {
+    padding: 10px 20px;
+    background-color: #65a9a9;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.fav {
+    padding: 10px 20px;
+}
+
+/* @media (max-width:420px){
+
+} */

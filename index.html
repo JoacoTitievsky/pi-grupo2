@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Proyecto Integrador</title>
+    <title>Home</title>
 </head>
 
 <body>
@@ -14,35 +14,34 @@
         <section class="logo">
             <img class="imglogo" src="./img/MUSIC (2).png" alt="">
         </section>
-        <section>
-            <a href="./detallealbum.html?id=${data.result[index].id}">
-                <img class="imgcancion" src="" alt="" />
-            </a>
-            <div class="contenedor-form">
-                <article class="art-form">
-                    <form id="buscador" class="form-result" action="./resultadobusqueda.html" method="get">
-                        <input type="text" name="buscar" id="textoBuscado" required>
-                        <button class="buttonart" type="submit">Buscar</button>
-                    </form>
-                </article>
-            </div>
-            </article>
-
-
-            <nav>
-                <ul class="navig">
-                    <li><a href="./index.html">HOME</a> </li>
-                    <li><a href="./playlist.html">PLAYLIST</a> </li>
-                    <li><a href="./genres.html">GENEROS</a> </li>
-                </ul>
-            </nav>
         </section>
+        
+                <a href="./detallealbum.html?id=${data.result[index].id}">
+                    <img class="imgcancion" src="" alt="" />
+                </a>
+                <div class="contenedor-form">
+                    <article class="art-form">
+                        <form id="buscador" class="form-result" action="./resultadobusqueda.html" method="get">
+                            <input type="text" name="buscar" id="textoBuscado" required>
+                            <button class="buttonart" type="submit">Buscar</button>
+                        </form>
+                    </article>
+                </div>
+                </article>
+                <nav>
+                    <ul class="navig">
+                        <li><a href="./index.html">HOME</a> </li>
+                        <li><a href="./playlist.html">PLAYLIST</a> </li>
+                        <li><a href="./genres.html">GENEROS</a> </li>
+                    </ul>
+                </nav>
+            </section>
     </header>
     <main>
         <section class="secciones">
-            <h3 class="cancionestit">
+            <h2 class="cancionestit">
                 Canciones
-            </h3>
+            </h2>
             <div class="divpadrecanc">
                 <a href="./detallecancion.html">
                     <h2 class="nombrecancion"></h2>
@@ -56,9 +55,9 @@
     </main>
     <main>
         <section class="secciones">
-            <h3 class="albumestit">
+            <h2 class="albumestit">
                 Álbumes
-            </h3>
+            </h2>
             <div class="divpadredisc">
                 <a href="./detallealbum.html">
                     <img class="imgcancion" src="" alt="" />
@@ -70,9 +69,9 @@
 
     <main>
         <section class="secciones">
-            <h3 class="artistastit">
+            <h2 class="artistastit">
                 Artistas
-            </h3>
+            </h2>
             <div class="divpadreart">
                 <a href="./detallecantante.html"></a>
                 <img class="imgartista" src="" alt="" />

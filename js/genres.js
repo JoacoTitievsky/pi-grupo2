@@ -25,7 +25,7 @@ fetch(url)
         let objeto = data.data
         for (let index = 1; index < 10; index++) {
             generos.innerHTML += `<article><a href = "./detalledelgenero.html?id=${objeto[index].id}">
-            <img class= "imggenero" src=${objeto[index].picture} alt="${objeto[index].name}"/>
+            <img class= "imggenero" src=${objeto[index].picture_medium} alt="${objeto[index].name}"/>
             <h2 class="nombregenero">${objeto[index].name}</h2> 
             </a></article>`
         }
