@@ -30,7 +30,7 @@ fetch(url)
         for (let index = 1; index < 5; index++) {
             let contenedorArtista = `<article>
             <img class="imagen" src="${objeto.picture}" alt="">
-            <h2 class="nombreartista"> Nombre del Artista: ${objeto.name}</h2>
+            <h2 class="nombreartista"> Nombre del Artista: ${objeto.data.name}</h2>
             <h3 class="albumesartista">Albumes de ${objeto.artist.name}: </h3>
             </article>`
             artistas.innerHTML += contenedorArtista

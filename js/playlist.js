@@ -43,7 +43,7 @@ if (playlist == null || playlist.length == 0) {
     
     for (let index = 0; index < playlist.length; index++) {
 
-        let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/chart/${playlist[index]}`;
+        let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/tracks/${playlist[index]}`;
 
         fetch(url)
         .then(function(response) {
