@@ -27,7 +27,7 @@ fetch(url)
         console.log(data);
         let canciones = data
         let a = document.querySelector(".generolist")
-        let contenedorCanciones = `<article>
+        let contenedorCanciones = `<article class="song">
         <h2 class="cancion"> Nombre de la Canción: ${canciones.title}</h2>
         <img class="imagen" src="${canciones.album.cover_medium}" alt="${canciones.title}">
         <h3 class="album"> Nombre del Album: ${canciones.album.title}</h3>

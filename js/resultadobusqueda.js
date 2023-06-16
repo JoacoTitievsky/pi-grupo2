@@ -28,24 +28,29 @@ fetch(url)
     .then(function (data) {
         console.log(data);
         document.querySelector(".results").innerHTML +=
-            `<h1 class="titulosearch">"${valor}"</h1>`
+            `<h1 class="titulosearch">RESULTADOS DE BÚSQUEDA PARA: "${valor}"</h1>`
 
         if (data.data.length === 0) {
             document.querySelector(".resultscanciones").innerHTML = "No se encuentran coincidencias";
+            document.querySelector(".resultsartista").innerHTML = "No se encuentran coincidencias";
+            document.querySelector(".resultsalbum").innerHTML = "No se encuentran coincidencias";
         } else {
             for (let index = 0; index < 5; index++) {
                 document.querySelector(`.resultscanciones`).innerHTML += `<a href="./detallecancion.html?id=${data.data[index].id}">
-                <img class="imgcancionsearch" src=${data.data[index].album.cover} alt=""/>
-                <h3 class="nombrecancionsearch">Nombre Canción: ${data.data[index].title}</h3>
+                <h3 class="nombrecancionsearch"> ${data.data[index].title}</h3>
+                <img class="imgcancionsearch" src=${data.data[index].album.cover_medium} alt=""/>
+                
                 </a>`;
                 document.querySelector(`.resultsartista`).innerHTML += `<a href="./detallecantante.html?id=${data.data[index].id}">
-                <img class="imgartsearch" src=${data.data[index].artist.picture} alt=""/>
-                <h3 class="nombreartistasearch">Nombre Artista: ${data.data[index].artist.name}</h3>
+                <h3 class="nombreartistasearch"> ${data.data[index].artist.name}</h3>
+                <img class="imgartsearch" src=${data.data[index].artist.picture_medium} alt=""/>
+                
                 </a>`;
 
                 document.querySelector(`.resultsalbum`).innerHTML += `<a href="./detallealbum.html?id=${data.data[index].id}">
-                <img class="imgcancionsearch" src=${data.data[index].album.cover} alt=""/>
-                <h4 class="nombrealbumsearch">Nombre Álbum: ${data.data[index].album.title}</h4>
+                <h3 class="nombrealbumsearch"> ${data.data[index].album.title}</h3>
+                <img class="imgcancionsearch" src=${data.data[index].album.cover_medium} alt=""/>
+
                 </a>`;
             }
         }   

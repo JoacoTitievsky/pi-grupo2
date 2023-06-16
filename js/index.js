@@ -33,7 +33,7 @@ fetch(url)
         for (let index = 0; index < 5; index++) {
             canciones.innerHTML += `<article><a href = "./detallecancion.html?id=${objeto[index].id}">
             <h2 class="nombrecancion">${objeto[index].album.title}</h2>
-            <img class= "imgcancion" src=${objeto[index].album.cover} alt="${objeto[index].title}"/>
+            <img class= "imgcancion" src=${objeto[index].album.cover_medium} alt="${objeto[index].title}"/>
             <h3 class="nombrealbum">${objeto[index].album.title}</h3>
             <h4 class="nombreartista">${objeto[index].artist.name}</h4>
             </a></article>`
@@ -58,7 +58,7 @@ fetch(url)
         console.log(objeto);
         for (let index = 0; index < 5; index++) {
             albumes.innerHTML += `<article><a href = "./detallealbum.html?id=${objeto[index].id}">
-            <img class= "imgcancion" src=${objeto[index].album.cover} alt="${objeto[index].title}"/>
+            <img class= "imgcancion" src=${objeto[index].album.cover_medium} alt="${objeto[index].title}"/>
             <h3 class="nombrealbum">${objeto[index].album.title}</h3>
             </article></a>`
         }
@@ -81,7 +81,7 @@ fetch(url)
         console.log(objeto);
         for (let index = 0; index < 5; index++) {
             artista.innerHTML += `<article><a href = "./detallecantante.html?id=${objeto[index].id}">
-            <img class= "imgartista" src=${objeto[index].artist.picture} alt="${objeto[index].title}"/>
+            <img class= "imgartista" src=${objeto[index].artist.picture_medium} alt="${objeto[index].title}"/>
             <h4 class="nombreartista">${objeto[index].artist.name}</h4> 
             </article></a>`
        
