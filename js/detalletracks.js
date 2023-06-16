@@ -39,10 +39,10 @@ fetch(url)
         console.log(error);
     });
 
-let favoritos = [];
+let playlist = [];
 
 
-let recuperoStorage = localStorage.getItem('favoritos');
+let recuperoStorage = localStorage.getItem('playlist');
 
 
 if (recuperoStorage != null) {
@@ -67,5 +67,5 @@ fav.addEventListener('click', function () {
     }
 
     let favoritosToString = JSON.stringify(favoritos);
-    localStorage.setItem('favoritos', favoritosToString)
+    localStorage.setItem('playlist', favoritosToString)
 })

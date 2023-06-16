@@ -55,12 +55,12 @@ fetch(url)
 
     
         let albumes = document.querySelector('.divpadredisc')
-        let objeto = data.tracks.data
+        let objeto = data.albums.data
         console.log(objeto);
         for (let index = 0; index < 5; index++) {
             albumes.innerHTML += `<article><a href = "./detallealbum.html?id=${objeto[index].id}">
-            <img class= "imgcancion" src=${objeto[index].album.cover_medium} alt="${objeto[index].title}"/>
-            <h3 class="nombrealbum">${objeto[index].album.title}</h3>
+            <img class= "imgcancion" src=${objeto[index].cover_medium} alt="${objeto[index].title}"/>
+            <h3 class="nombrealbum">${objeto[index].title}</h3>
             </article></a>`
         }
     })
@@ -78,12 +78,12 @@ fetch(url)
 
         
         let artista = document.querySelector('.divpadreart')
-        let objeto = data.tracks.data
+        let objeto = data.artists.data
         console.log(objeto);
         for (let index = 0; index < 5; index++) {
             artista.innerHTML += `<article><a href = "./detallecantante.html?id=${objeto[index].id}">
-            <img class= "imgartista" src=${objeto[index].artist.picture_medium} alt="${objeto[index].title}"/>
-            <h4 class="nombreartista">${objeto[index].artist.name}</h4> 
+            <img class= "imgartista" src=${objeto[index].picture_medium} alt="${objeto[index].title}"/>
+            <h4 class="nombreartista">${objeto[index].name}</h4> 
             </article></a>`
        
         }

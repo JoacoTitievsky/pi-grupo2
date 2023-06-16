@@ -40,10 +40,10 @@ FALSE: Hacer un FOR que recorra playlist y haga un fetch por cada elemento del a
 if (playlist == null || playlist.length == 0) {
     section.innerHTML = '<p>No hay canciones en tu playlist</p>'
 } else {
-    
+
     for (let index = 0; index < playlist.length; index++) {
 
-        let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/tracks/${playlist[index]}`;
+        let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/track/${playlist[index]}`;
 
         fetch(url)
         .then(function(response) {
@@ -53,13 +53,10 @@ if (playlist == null || playlist.length == 0) {
             console.log(data);
 
             cancionplaylist += `<article>
-                                        <h2>Nombre Cancion: ${data.name}</h2>
-                                        <img src=${data.image} alt='' />
-                                        <p>Status: ${data.status} </p>
-                                        <a href='detalle.html?id=${data.id}'>Ver más</a>
-                                    </article>`;
+                                        <h2 class="artistastit">Nombre de la canción: ${data.title}</h2>
+                                        <img src=${data.album.cover_medium} alt=""> </article>`;
 
-            section.innerHTML = cancionplaylist;
+            section.innerHTML += cancionplaylist;
             
         })
         .catch(function(error) {

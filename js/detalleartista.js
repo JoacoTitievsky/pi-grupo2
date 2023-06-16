@@ -25,18 +25,41 @@ fetch(url)
     })
     .then(function (data) {
         console.log(data);
-        let artistas = document.querySelector('.detalleartista')
+        let artistas = document.querySelector('.generolist')
         let objeto = data
-        for (let index = 1; index < 5; index++) {
-            let contenedorArtista = `<article>
-            <img class="imagen" src="${objeto.picture}" alt="">
-            <h2 class="nombreartista"> Nombre del Artista: ${objeto.data.name}</h2>
-            <h3 class="albumesartista">Albumes de ${objeto.artist.name}: </h3>
+
+        let contenedorArtista = `<article>
+            <img class="imagen" src="${objeto.picture_medium}" alt="">
+            <h2 class="nombreartista"> Nombre del Artista: ${objeto.name}</h2>
             </article>`
-            artistas.innerHTML += contenedorArtista
-        }
+        artistas.innerHTML += contenedorArtista
+
 
     })
     .catch(function (error) {
         console.log(error);
     });
+
+let listaartista = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${id}/albums`
+let detalleartista = document.querySelector(".detalleartista")
+
+
+fetch(listaartista)
+    .then(function (response) {
+        return response.json()
+    })
+    .then(function (data) {
+    console.log(data);
+        for (let i = 0; i < 6; i++) {
+            let artistdetail = document.querySelector('.artistdetail');
+                 artistdetail.innerHTML +=
+                `<a href="./detallealbum.html?id=${data.data[i].id}">${data.data[i].title}</a>`;     
+        }
+        
+    })
+    .catch(function (error) {
+        console.log(error);
+
+    });
+
+

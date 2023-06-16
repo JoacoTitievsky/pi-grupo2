@@ -1,4 +1,3 @@
-// NO FUNCIONA
 let qs = location.search;
 let qsObj = new URLSearchParams(qs)
 let id = qsObj.get('id');
@@ -37,10 +36,10 @@ fetch(url)
     .then(function (data) {
         console.log(data);
         let album = data
-        let a = document.querySelector(".albumlist")
+        let a = document.querySelector(".generolist")
         let contenedorAlbum = `<article>
         <h3 class="album"> Nombre del Album: ${album.title}</h3>
-        <img class="imagen" src="${album.tracks.album.cover}" alt="">
+        <img class="imagen" src="${album.cover_medium}" alt="">
         <h4 class="artista"> Nombre del Artista: ${album.artist.name}</h4>
         <h4 class="genero">Género: ${album.genres.data[0].name}</h4>
         </article>`
