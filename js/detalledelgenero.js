@@ -28,8 +28,7 @@ fetch(url)
         let generos = data
         let a = document.querySelector(".genre")
         let detalleGenero = `<article>
-        <h2 class="nombredelgenero"> Nombre del Género: ${generos.name}</h2>
-        
+        <h2 class="titulosearch"> Artistas de ${generos.name}</h2>
         </article>`
         a.innerHTML += detalleGenero
     })

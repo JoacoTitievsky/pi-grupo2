@@ -27,14 +27,14 @@ a {
     background-color: rgb(94, 91, 91);
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    font-size: medium;
+    font-size: 18px;
     padding: 1px 2px;
     border-radius: 50px;
     color: white;
     margin: 3px;
 }
 
-footer.foot{
+footer.foot {
     margin-top: 40px;
 }
 
@@ -49,11 +49,15 @@ footer.foot{
 }
 
 .navig li a {
-    background-color: rgb(186, 176, 176);
+    background-color: #8c9e92;
+    color: #ffffff;
     display: inline-block;
     padding: 15px 30px;
     color: white;
     text-decoration: none;
+    border-radius: 10px;
+    display: inline-block;
+    font-weight: bold;
 }
 
 .art-form {
@@ -514,4 +518,23 @@ button.buttonart {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+
+.btn-playlist {
+    padding: 10px 20px;
+    background-color: #65a9a9;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.fav {
+    padding: 10px 20px;
 }
