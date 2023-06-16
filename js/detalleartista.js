@@ -50,10 +50,13 @@ fetch(listaartista)
     })
     .then(function (data) {
     console.log(data);
-        for (let i = 0; i < 6; i++) {
-            let artistdetail = document.querySelector('.artistdetail');
+        for (let i = 0; i < 6 ; i++) {
+            
+            let artistdetail = document.querySelector('.detalleartista');
                  artistdetail.innerHTML +=
-                `<a href="./detallealbum.html?id=${data.data[i].id}">${data.data[i].title}</a>`;     
+                `  <a href="./detallealbum.html?id=${data.data[i].id}">${data.data[i].title}
+                <h2 class="artistdetail"></h2>
+                <img class="imagen" src="${data.data[i].cover}" alt=""></a>`;     
         }
         
     })
