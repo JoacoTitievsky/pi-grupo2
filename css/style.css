@@ -578,7 +578,8 @@ button.buttonart {
     }
 
     .navig{
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
         width: 100%;
     }
 
@@ -588,5 +589,40 @@ button.buttonart {
         flex-direction: column;
         align-items: center;
     }
+
+    .divpadrecanc{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-}
+
+    .divpadredisc{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .divpadreart{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .divpadregenres{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .generolista{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .generolist{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    }
