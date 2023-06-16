@@ -69,3 +69,17 @@ fav.addEventListener('click', function () {
     let favoritosToString = JSON.stringify(favoritos);
     localStorage.setItem('playlist', favoritosToString)
 })
+
+let botonOscuro = document.querySelector(".botonOscuro")
+let body = document.querySelector("body")
+
+botonOscuro.addEventListener('click', function (e) {
+    if (botonOscuro.innerText == "Modo Claro") {
+        body.style.background = 'white';
+        this.innerText = 'Modo Oscuro';
+    } else {
+        body.style.background = '#000000e2';
+        this.innerText = 'Modo Claro';
+    }
+})
+

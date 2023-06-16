@@ -39,9 +39,9 @@ if (playlist == null || playlist.length == 0) {
         .then(function(data) {
             console.log(data);
 
-            cancionplaylist += `<article><a href="./detallecancion.html?id=${data[index].id}">
+            cancionplaylist += `<article>
                                         <h2 class="cancion">Nombre de la canción: ${data.title}</h2>
-                                        <img src=${data.album.cover_medium} alt=""> </a></article>`;
+                                        <img src=${data.album.cover_medium} alt=""></article>`;
 
             section.innerHTML += cancionplaylist;
             
@@ -52,3 +52,4 @@ if (playlist == null || playlist.length == 0) {
         
     }
 }
+
