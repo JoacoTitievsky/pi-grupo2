@@ -25,7 +25,7 @@ let cancionplaylist = '';
 
  
 if (playlist == null || playlist.length == 0) {
-    section.innerHTML = '<p>No hay canciones en tu playlist</p>'
+    section.innerHTML = '<p class="titulosearch">No hay canciones en tu playlist</p>'
 } else {
 
     for (let index = 0; index < playlist.length; index++) {
@@ -40,7 +40,7 @@ if (playlist == null || playlist.length == 0) {
             console.log(data);
 
             cancionplaylist += `<article>
-                                        <h2 class="artistastit">Nombre de la canción: ${data.title}</h2>
+                                        <h2 class="titulosearch">Nombre de la canción: ${data.title}</h2>
                                         <img src=${data.album.cover_medium} alt=""> </article>`;
 
             section.innerHTML += cancionplaylist;
