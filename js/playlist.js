@@ -15,9 +15,9 @@ if(campoBuscar.value.length == 0) {
 }
 });
 
-boton.addEventListener('click', function(){
+/* boton.addEventListener('click', function(){
     alert('Seras redirigido a escuchar tu cancion favorita')
-});
+}); */
 
 
 /* Recupero el storage */
