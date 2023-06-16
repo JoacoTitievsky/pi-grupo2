@@ -2,6 +2,7 @@
 let qs = location.search;
 let qsObj = new URLSearchParams(qs)
 let id = qsObj.get('id');
+console.log(id);
 
 let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/album/${id}`;
 
