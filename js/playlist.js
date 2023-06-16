@@ -40,7 +40,7 @@ if (playlist == null || playlist.length == 0) {
             console.log(data);
 
             cancionplaylist += `<article>
-                                        <h2 class="titulosearch">Nombre de la canción: ${data.title}</h2>
+                                        <h2 class="cancion">Nombre de la canción: ${data.title}</h2>
                                         <img src=${data.album.cover_medium} alt=""> </article>`;
 
             section.innerHTML += cancionplaylist;
